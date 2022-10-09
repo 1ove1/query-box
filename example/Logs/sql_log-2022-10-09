@@ -1,0 +1,2637 @@
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-39] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-07] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-08] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-09] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-44] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-47] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-47] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-47] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-48] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-14] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-02] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-02] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-02] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-03] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-30] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-32] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-24] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-14] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-14] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-14] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-14] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-41] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-13] runtime.NOTICE: 
+SQL: [114] SELECT `desc`, `id`,  FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `desc` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 14-10-50] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-50] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-50] runtime.NOTICE: 
+SQL: [123] SELECT `desc`, `alt_name`.`id` FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `desc` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 14-10-53] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-53] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-53] runtime.NOTICE: 
+SQL: [123] SELECT `desc`, `alt_name`.`id` FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `desc` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-15] runtime.NOTICE: 
+SQL: [140] SELECT `desc`, `alt_name`.`id` FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `id_another_test_table` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 14-10-42] runtime.NOTICE: 
+SQL: [140] SELECT `desc`, `alt_name`.`id` FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `id_another_test_table` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 18-10-24] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-24] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [140] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data10', '10'),('data10000', '10000'),('data1', '1'),('data100', '100') 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-24] runtime.NOTICE: 
+SQL: [140] SELECT `desc`, `alt_name`.`id` FROM `test_table` INNER JOIN `another_test_table` as `alt_name` ON `id_another_test_table` = `alt_name`.`id` 
+Params:  0
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-42] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-29] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-05] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 18-10-30] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [67] INSERT INTO `another_test_table` (`id`) VALUES (?),(?),(?),(?),(?) 
+Sent SQL: [87] INSERT INTO `another_test_table` (`id`) VALUES ('1'),('10'),('100'),('1000'),('10000') 
+Params:  5
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [94] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES (?, ?),(?, ?),(?, ?),(?, ?) 
+Sent SQL: [131] INSERT INTO `test_table` (`desc`, `id_another_test_table`) VALUES ('data1', '100'),('data2', NULL),('data3', NULL),('data4', NULL) 
+Params:  8
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #4:
+paramno=4
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #5:
+paramno=5
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #6:
+paramno=6
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #7:
+paramno=7
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [27] SELECT * FROM `test_table` 
+Params:  0
+  
+[2022-10-09 19-10-02] runtime.NOTICE: 
+SQL: [35] SELECT * FROM `another_test_table` 
+Params:  0
+  
+[2022-10-09 19-10-20] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-20] runtime.NOTICE: 
+SQL: [46] SELECT * FROM `test_table` WHERE `desc` = (?) 
+Sent SQL: [56] SELECT * FROM `test_table` WHERE `desc` = ('data10000') 
+Params:  1
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-34] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-34] runtime.NOTICE: 
+SQL: [46] SELECT * FROM `test_table` WHERE `desc` = (?) 
+Sent SQL: [56] SELECT * FROM `test_table` WHERE `desc` = ('data10000') 
+Params:  1
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-45] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-45] runtime.NOTICE: 
+SQL: [46] SELECT * FROM `test_table` WHERE `desc` = (?) 
+Sent SQL: [56] SELECT * FROM `test_table` WHERE `desc` = ('data10000') 
+Params:  1
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-47] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-47] runtime.NOTICE: 
+SQL: [101] SELECT `row_count_result`.`row_count` FROM (SELECT COUNT(*) FROM `test_table`) as `row_count_result` 
+Params:  0
+  
+[2022-10-09 19-10-04] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-04] runtime.NOTICE: 
+SQL: [114] SELECT `row_count_result`.`row_count` FROM (SELECT COUNT(*) as row_count FROM `test_table`) as `row_count_result` 
+Params:  0
+  
+[2022-10-09 19-10-15] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-15] runtime.NOTICE: 
+SQL: [114] SELECT `row_count_result`.`row_count` FROM (SELECT COUNT(*) as row_count FROM `test_table`) as `row_count_result` 
+Params:  0
+  
+[2022-10-09 19-10-31] runtime.NOTICE: 
+SQL: [57] INSERT INTO `test_table` (`desc`) VALUES (?),(?),(?),(?) 
+Sent SQL: [88] INSERT INTO `test_table` (`desc`) VALUES ('data10'),('data10000'),('data1'),('data100') 
+Params:  4
+Key: Position #0:
+paramno=0
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #1:
+paramno=1
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #2:
+paramno=2
+name=[0] ""
+is_param=1
+param_type=2
+Key: Position #3:
+paramno=3
+name=[0] ""
+is_param=1
+param_type=2
+  
+[2022-10-09 19-10-31] runtime.NOTICE: 
+SQL: [114] SELECT `row_count_result`.`row_count` FROM (SELECT COUNT(*) as row_count FROM `test_table`) as `row_count_result` 
+Params:  0
+  
