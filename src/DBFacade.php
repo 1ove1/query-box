@@ -198,7 +198,7 @@ class DBFacade
 	}
 
 	/**
-	 * @param array<string, string>|string $tableName
+	 * @param array<string|int, string>|string $tableName
 	 * @param array<string|int, string> $condition - support:
 	 * 1. Pseudonym notation
 	 *      [

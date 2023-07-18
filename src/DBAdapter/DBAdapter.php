@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace QueryBox\DBAdapter;
 
 use QueryBox\Migration\Container\Query;
+use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
 
 /**
  * Common interface for database connection

@@ -41,8 +41,8 @@ trait InsertTrait
 	}
 
 	/**
-	 * @param array<int|string, DatabaseContract|array<DatabaseContract>> $values
-	 * @return array<int|string, DatabaseContract>
+	 * @param array<int|string,DatabaseContract|array<DatabaseContract>> $values
+	 * @return array<int|string,DatabaseContract>
 	 */
 	private static function normalizeValues(array $values) : array
 	{
@@ -52,10 +52,7 @@ trait InsertTrait
 
 
 		foreach ($values as $elem) {
-			$currCount = match(is_array($elem)) {
-				true => count($elem),
-				false => 1
-			};
+			$currCount = (is_array($elem)) ? count($elem): false;
 
 			if ($currCount > $maxCount) {
 				$maxCount = $currCount;

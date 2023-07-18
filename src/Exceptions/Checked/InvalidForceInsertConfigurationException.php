@@ -3,9 +3,9 @@
 namespace QueryBox\Exceptions\Checked;
 
 use QueryBox\Exceptions\ExceptionCodes;
-use RuntimeException;
+use Exception;
 
-class InvalidForceInsertConfigurationException extends RuntimeException
+class InvalidForceInsertConfigurationException extends Exception
 {
 	public function __construct(string $message)
 	{
