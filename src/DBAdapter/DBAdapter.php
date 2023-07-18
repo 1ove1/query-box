@@ -46,6 +46,7 @@ interface DBAdapter
 	 * @param array<string> $fields - fields
 	 * @param int $stagesCount - stages count
 	 * @return QueryTemplate - prepared statement object
+	 * @throws InvalidForceInsertConfigurationException
 	 */
     public function getForceInsertTemplate(
         string $tableName,

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace QueryBox\Exceptions\Unchecked;
+namespace QueryBox\Exceptions\Checked;
 
 use QueryBox\Exceptions\ExceptionCodes;
 use RuntimeException;

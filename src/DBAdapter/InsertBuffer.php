@@ -4,7 +4,7 @@ namespace QueryBox\DBAdapter;
 
 use QueryBox\DBFacade;
 use QueryBox\Exceptions\Unchecked\IncorrectBufferInputException;
-use QueryBox\Exceptions\Unchecked\InvalidForceInsertConfigurationException;
+use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
 use QueryBox\DBAdapter\DatabaseContract;
 
 /**
@@ -27,6 +27,7 @@ abstract class InsertBuffer
      * @param string $tableName - name of table
      * @param String[] $tableFields - table fields
      * @param int $groupInsertCount - number of groups in group insert
+     * @throws InvalidForceInsertConfigurationException
      */
     public function __construct(string $tableName, array $tableFields, int $groupInsertCount)
     {
@@ -51,20 +52,21 @@ abstract class InsertBuffer
      * @param array<string> $tableFields - fields to create
      * @param int $groupInsertCount - stage count
      * @return void
+     * @throws InvalidForceInsertConfigurationException
      */
     public static function isValid(string $tableName, array $tableFields, int $groupInsertCount): void
     {
         if ($groupInsertCount < 1) {
             throw new InvalidForceInsertConfigurationException(
-                'PDOTemplate error: stages buffer needs to be more than 0'
+                'PDOTemplate error: stages buffer needs to be more than 0, passed: ' . $groupInsertCount
             );
         } elseif (empty($tableFields)) {
             throw new InvalidForceInsertConfigurationException(
-                'PDOTemplate error: stages buffer needs to be more than 0'
+                'PDOTemplate error: argiment "$tableFields" shouldnt be empty, passed: ' . print_r($tableFields, true)
             );
         } elseif (empty($tableName)) {
             throw new InvalidForceInsertConfigurationException(
-                'PDOTemplate error: stages buffer needs to be more than 0'
+                'PDOTemplate error: unknown $tableName, passed: ' . $tableName
             );
         }
     }
