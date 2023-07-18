@@ -46,7 +46,7 @@ abstract class BaseOptionFacade
 	protected static function isTableExists(DBAdapter $db, string $tableName): bool
 	{
 		$container = QueryGenerator::genShowTableQuery();
-		$tableList = $db->rawQuery($container)->fetchAll(QueryResult::PDO_F_COL);
+		$tableList = $db->rawQuery($container)->fetchCollumn();
 
 
 		return in_array($tableName, $tableList, true);

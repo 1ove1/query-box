@@ -1,21 +1,13 @@
 parameters:
+    treatPhpDocTypesAsCertain: false
     level: 9
     paths:
-        - web
-        - database
-        - cli
-        - config
-        - gar
-        - bootstrap.php
+        - src
 
     typeAliases:
         DatabaseContract: 'int|float|string|bool|null'
-        AddressElementContract: 'array<int, array<int|string, mixed>>'
         MigrationParams: 'array{fields: array<string, string>, foreign?: array<string, string|array<string>>}'
-        AddressJSON: 'array<int, array{raw: string|null, type: string, items: AddressElementContract}>'
 
     exceptions:
         uncheckedExceptionRegexes:
-            - '#^DB\\Exceptions\\Unchecked\\#'
-            - '#^GAR\\Exceptions\\Unchecked\\#'
-            - '#^CLI\\Exceptions\\Unchecked\\#'
+            - '#^QueryBox\\Exceptions\\Unchecked\\#'

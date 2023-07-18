@@ -63,6 +63,13 @@ class PDOQueryResult implements QueryResult
 		return $this->fetchAll(QueryResult::PDO_F_NUM);
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	function fetchCollumn(): array
+	{
+		return $this->fetchAll(QueryResult::PDO_F_COL);
+	}	
 
 	/**
 	 * @inheritDoc

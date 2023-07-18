@@ -9,6 +9,7 @@ use QueryBox\DBAdapter\InsertBuffer;
 use QueryBox\DBAdapter\QueryResult;
 use QueryBox\DBAdapter\QueryTemplateBindAble;
 use QueryBox\Exceptions\Checked\QueryTemplateNotFoundException;
+use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
 use QueryBox\Exceptions\Unchecked\IncorrectBufferInputException;
 
 /**
@@ -35,6 +36,7 @@ class PDOForceInsertTemplate extends InsertBuffer implements QueryTemplate
 	 * @param string $tableName - name of prepared table
 	 * @param String[] $fields - fields of prepared table
 	 * @param int $stagesCount - default stages count
+     * @throws InvalidForceInsertConfigurationException
 	 */
     public function __construct(
         DBAdapter $db,

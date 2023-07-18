@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace QueryBox\DBAdapter;
 
 use QueryBox\Migration\Container\Query;
+use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
 
 /**
  * Common interface for database connection
@@ -16,7 +17,7 @@ interface DBAdapter
 	 * @param string $dbHost - db host
 	 * @param string $dbName - db name
 	 * @param string $dbPort - port
-	 * @return self;
+	 * @return DBAdapter;
 	 */
 	static function connectViaDSN(string $dbType, string $dbHost,
 	                              string $dbName, string $dbPort,
@@ -46,6 +47,7 @@ interface DBAdapter
 	 * @param array<string> $fields - fields
 	 * @param int $stagesCount - stages count
 	 * @return QueryTemplate - prepared statement object
+	 * @throws InvalidForceInsertConfigurationException
 	 */
     public function getForceInsertTemplate(
         string $tableName,

@@ -12,15 +12,9 @@ trait SelectTrait
 	public static function select(array|string $fields = '*',
 	                              array|string|null $anotherTables = null): SelectQuery
 	{
-		$fields = match(is_string($fields)) {
-			true =>	$fields,
-			false => DBFacade::mappedFieldsToString($fields),
-		};
+		$fields = (is_string($fields)) ? $fields: DBFacade::mappedFieldsToString($fields);
 
-		$anotherTables = match(null === $anotherTables) {
-			true => self::tableQuoted(static::class),
-			default => $anotherTables
-		};
+		$anotherTables = (null === $anotherTables) ? self::tableQuoted(static::class): $anotherTables;
 
 		return new ImplSelect($fields, $anotherTables);
 	}
