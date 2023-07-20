@@ -59,7 +59,7 @@ class QueryGenerator implements QueryFactory
      */
     public static function genShowTableQuery(): Query
     {
-		$query = match ($_ENV['DB_TYPE']) {
+		$query = match ($_ENV['DB_TYPE'] ?? 'mysql') {
 			'mysql' => 'SHOW TABLES',
 			'pgsql' => "SELECT `table_name` FROM `information_schema`.`tables` WHERE `table_schema` = 'public' ORDER BY `table_name`;",
 			default => throw new BadQueryResultException("Unknown db type '{$_ENV['DB_TYPE']}'")
@@ -146,7 +146,7 @@ class QueryGenerator implements QueryFactory
 		foreach ($params as $index => $param) {
 			$param = strtoupper($param);
 
-			switch ($_ENV['DB_TYPE'] ?? null) {
+			switch ($_ENV['DB_TYPE'] ?? ['mysql']) {
 				case 'pgsql':
 					$param = str_replace('TINYINT', 'SMALLINT', $param);
 					$param = str_replace('UNSIGNED', '', $param);
