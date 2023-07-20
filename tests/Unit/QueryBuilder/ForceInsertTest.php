@@ -28,7 +28,7 @@ class ForceInsertTest extends TestCase
 
 	function testQueryBuilderEmptyFieldsForceInsertException(): void
 	{
-		$queryBuilder = new QueryBuilder(null, [], new FakePDODBAdapter());
+		$queryBuilder = new QueryBuilder([], null, new FakePDODBAdapter());
 
     $this->expectException(RuntimeException::class);
 
@@ -37,7 +37,7 @@ class ForceInsertTest extends TestCase
 
 	function testQueryBuilderEmptyFieldsSaveForceInsertException(): void
 	{
-		$queryBuilder = new QueryBuilder(null, [], new FakePDODBAdapter());
+		$queryBuilder = new QueryBuilder([], null, new FakePDODBAdapter());
 
     $this->expectException(RuntimeException::class);
 
