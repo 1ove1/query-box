@@ -17,7 +17,7 @@ interface DBAdapter
 	 * @param string $dbHost - db host
 	 * @param string $dbName - db name
 	 * @param string $dbPort - port
-	 * @return DBAdapter;
+	 * @return DBAdapter
 	 */
 	static function connectViaDSN(string $dbType, string $dbHost,
 	                              string $dbName, string $dbPort,
