@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace QueryBox\Exceptions\Unchecked;
+namespace QueryBox\Exceptions\Checked;
 
 use QueryBox\Exceptions\ExceptionCodes;
-use RuntimeException;
+use Exception;
 
-class InvalidForceInsertConfigurationException extends RuntimeException
+class InvalidForceInsertConfigurationException extends Exception
 {
 	public function __construct(string $message)
 	{

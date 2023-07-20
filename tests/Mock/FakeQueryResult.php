@@ -35,8 +35,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @param int $flag
-	 * @return array<int, array<int|string, DatabaseContract>>
+	 * @inheritDoc
 	 */
 	function fetchAll(int $flag = \PDO::FETCH_ASSOC): array
 	{
@@ -44,7 +43,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return array<int, array<string|int, DatabaseContract>>
+	 * @inheritDoc
 	 */
 	function fetchAllAssoc(): array
 	{
@@ -52,7 +51,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return array<int, array<string|int, DatabaseContract>>
+	 * @inheritDoc
 	 */
 	function fetchAllNum(): array
 	{
@@ -60,7 +59,15 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return int
+	 * @inheritDoc
+	 */
+	function fetchCollumn(): array
+	{
+		return $this->numFetch[0];
+	}
+
+	/**
+	 * @inheritDoc
 	 */
 	function rowCount(): int
 	{
@@ -68,7 +75,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return bool
+	 * @inheritDoc
 	 */
 	function isEmpty(): bool
 	{
@@ -76,7 +83,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return bool
+	 * @inheritDoc
 	 */
 	function isNotEmpty(): bool
 	{
@@ -84,7 +91,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return bool
+	 * @inheritDoc
 	 */
 	function hasOnlyOneRow(): bool
 	{
@@ -92,7 +99,7 @@ class FakeQueryResult implements QueryResult
 	}
 
 	/**
-	 * @return bool
+	 * @inheritDoc
 	 */
 	function hasManyRows(): bool
 	{

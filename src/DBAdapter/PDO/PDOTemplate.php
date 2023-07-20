@@ -39,7 +39,7 @@ class PDOTemplate implements QueryTemplateBindAble
         } catch (PDOException $pdoException) {
             throw new BadQueryResultException($this->template->queryString, $pdoException);
         } finally {
-			if (filter_var($_ENV['LOG_QUERY_RESULTS'], FILTER_VALIDATE_BOOL)) {
+			if (filter_var($_ENV['LOG_QUERY_RESULTS'] ?? false, FILTER_VALIDATE_BOOL)) {
 				$this->logLastQueryExecute();
 			}
         }

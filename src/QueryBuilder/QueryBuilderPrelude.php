@@ -2,9 +2,12 @@
 
 namespace QueryBox\QueryBuilder;
 
+use QueryBox\DBAdapter\DBAdapter;
 use QueryBox\DBAdapter\QueryResult;
 use QueryBox\DBAdapter\QueryTemplate;
 use QueryBox\DBFacade;
+use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
+use QueryBox\Logs\DBLogger;
 use QueryBox\Migration\MigrateAble;
 use QueryBox\QueryBuilder\ActiveRecord\ActiveRecord;
 use QueryBox\QueryBuilder\QueryTypes\{Delete\DeleteAble};
@@ -27,15 +30,14 @@ use SelectTrait, InsertTrait, UpdateTrait, DeleteTrait;
 
 	/** @var ActiveRecord[] */
 	protected readonly array $userStates;
-	/** @var QueryTemplate - force insert template */
-	protected readonly QueryTemplate $forceInsertTemplate;
+	/** @var QueryTemplate|InvalidForceInsertConfigurationException - force insert template */
+	protected readonly QueryTemplate|InvalidForceInsertConfigurationException $forceInsertTemplate;
 
 	/**
-	 * @param array<string> $fields
 	 * @param string|null $tableName
+	 * @param array<string> $fields
 	 */
-	public function __construct(array $fields = [],
-	                            ?string $tableName = null)
+	public function __construct( array $fields = [], ?string $tableName = null, ?DBAdapter $db = null)
 	{
 		$this->userStates = $this->prepareStates();
 
@@ -48,13 +50,15 @@ use SelectTrait, InsertTrait, UpdateTrait, DeleteTrait;
 			}
 		}
 
-		if (!empty($fields)) {
-			$db = DBFacade::getDBInstance();
+		try {
+			$db ??= DBFacade::getDBInstance();
 			$this->forceInsertTemplate = $db->getForceInsertTemplate(
 				tableName: $tableName,
 				fields: $fields,
-				stagesCount: (int)$_ENV['DB_BUFF']
+				stagesCount: (int)($_ENV['DB_BUFF'] ?? 1)
 			);
+		} catch(InvalidForceInsertConfigurationException $e) {
+			$this->forceInsertTemplate = $e;
 		}
 	}
 
@@ -100,6 +104,15 @@ use SelectTrait, InsertTrait, UpdateTrait, DeleteTrait;
 	 */
 	public function forceInsert(array $values): QueryResult
 	{
+		if ($this->forceInsertTemplate instanceof InvalidForceInsertConfigurationException) {
+			$message = $this->forceInsertTemplate->getMessage();
+			$code = $this->forceInsertTemplate->getCode();
+			throw new RuntimeException(
+				"Cannot use force insert functional couse:\t{$message}", 
+				$code, 
+				$this->forceInsertTemplate
+			);
+		}
 		return $this->forceInsertTemplate->exec($values);
 	}
 
@@ -108,6 +121,15 @@ use SelectTrait, InsertTrait, UpdateTrait, DeleteTrait;
 	 */
 	public function saveForceInsert(): QueryResult
 	{
+		if ($this->forceInsertTemplate instanceof InvalidForceInsertConfigurationException) {
+			$message = $this->forceInsertTemplate->getMessage();
+			$code = $this->forceInsertTemplate->getCode();
+			throw new RuntimeException(
+				"Cannot use force insert functional couse:\t{$message}", 
+				$code, 
+				$this->forceInsertTemplate
+			);
+		}
 		return $this->forceInsertTemplate->save();
 	}
 

@@ -23,7 +23,7 @@ class DBResolver
 
 	static private function init(): void
 	{
-		$dbType = $_ENV["DB_TYPE"] ?? null;
+		$dbType = $_ENV["DB_TYPE"] ?? "mysql";
 
 		/** @var Driver $driverObj */
 		$driverObj = match($dbType) {

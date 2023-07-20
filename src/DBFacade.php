@@ -12,76 +12,101 @@ use function ctype_upper;
 
 /**
  * Database facade static class
+ *
+ * @phpstan-type DBParams array{DB_TYPE?: string, DB_HOST?: string, DB_NAME: string, DB_PORT?: string, DB_USER: string, DB_PASS: string}
  */
 class DBFacade
 {
-    /**
-     * @var DBAdapter|null - database static object
-     */
-    public static ?DBAdapter $instance = null;
+	/**
+	 * @var DBAdapter|null - database static object
+	 */
+	public static ?DBAdapter $instance = null;
+
+	/**
+	 * Register singleton instance (allias for getDBInstance)
+	 * If $params is not passed app used $_ENV params with the same array keys
+	 * Also QueryBuilder will try use this automaticly ($_ENV preffer)
+	 * $_ENV also will be used to get immutable DB instance
+	 *
+	 * @param DBParams|null $params
+	 * @return DBAdapter
+	 */
+	public static function registerGlobalDB(?array $params = null): DBAdapter
+	{
+		return self::getDBInstance($params);
+	}
 
 	/**
 	 * Get curr instance of database
-	 *
+	 * 
+	 * @param DBParams|null $params
 	 * @return DBAdapter
 	 */
-    public static function getDBInstance(): DBAdapter
-    {
-        if (self::$instance === null) {
-	        self::$instance = self::connectViaPDO();
+	public static function getDBInstance(?array $params = null): DBAdapter
+	{
+			if (self::$instance === null) {
+				self::$instance = self::getImmutableDBConnection($params);
 
-        }
+			}
 
-        return self::$instance;
-    }
+			return self::$instance;
+	}
 
 	/**
 	 * Connection without singleton
+	 * 
+	 * @param DBParams|null $params
 	 * @return DBAdapter
 	 */
-	public static function getImmutableDBConnection(): DBAdapter
+	public static function getImmutableDBConnection(?array $params = null): DBAdapter
 	{
-		return self::connectViaPDO();
+		/** @var array{DB_NAME: string, DB_USER: string, DB_PASS: string, ...} $params */
+		$params ??= $_ENV;
+		return self::connectViaPDO($params);
 	}
 
 	/**
 	 * Connection via PDO
 	 *
+	 * @param DBParams $params
 	 * @return DBAdapter
 	 */
-    public static function connectViaPDO(): DBAdapter
-    {
-	    return PDOObject::connectViaDSN(
-		    $_ENV['DB_TYPE'], $_ENV['DB_HOST'],
-		    $_ENV['DB_NAME'], $_ENV['DB_PORT'],
-		    $_ENV['DB_USER'], $_ENV['DB_PASS']
-	    );
-    }
+	public static function connectViaPDO(array $params): DBAdapter
+	{
+		return PDOObject::connectViaDSN(
+			$params['DB_TYPE'] ?? "mysql", 
+			$params['DB_HOST'] ?? "localhost",
+			$params['DB_NAME'], 
+			$params['DB_PORT'] ?? "3306",
+			$params['DB_USER'], 
+			$params['DB_PASS']
+		);
+	}
 
-    /**
-     * Generate table name in snake_case
-     * @param  string $className - full class name namespace
-     * @return string
-     */
-    public static function genTableNameByClassName(string $className): string
-    {
-	    $negStrLen = -strlen($className);
-	    $tableName = '';
+	/**
+	 * Generate table name in snake_case
+	 * @param  string $className - full class name namespace
+	 * @return string
+	 */
+	public static function genTableNameByClassName(string $className): string
+	{
+		$negStrLen = -strlen($className);
+		$tableName = '';
 
-	    for ($index = -1, $char = $className[$index];
-	         $index >= $negStrLen && $char !== '\\' && $char !== null;
-	         --$index, $char = $className[$index] ?? null) {
+		for ($index = -1, $char = $className[$index];
+					$index >= $negStrLen && $char !== '\\' && $char !== null;
+					--$index, $char = $className[$index] ?? null) {
 
-		    if (ctype_upper($char)) {
-			    $tableName = '_' . strtolower($char) . $tableName;
-		    } else {
-			    $tableName = $char . $tableName;
-		    }
+			if (ctype_upper($char)) {
+				$tableName = '_' . strtolower($char) . $tableName;
+			} else {
+				$tableName = $char . $tableName;
+			}
 
-	    }
+		}
 
-	    return substr($tableName, 1);
-    }
+		return substr($tableName, 1);
+	}
 
 	/**
 	 * Generate vars for prepared statement (in PDO: '?')
@@ -198,7 +223,7 @@ class DBFacade
 	}
 
 	/**
-	 * @param array<string, string>|string $tableName
+	 * @param array<string|int, string>|string $tableName
 	 * @param array<string|int, string> $condition - support:
 	 * 1. Pseudonym notation
 	 *      [
