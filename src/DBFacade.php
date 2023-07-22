@@ -6,6 +6,7 @@ use QueryBox\DBAdapter\DBAdapter;
 use QueryBox\DBAdapter\PDO\PDOObject;
 use QueryBox\Exceptions\Checked\ConditionNotFoundException;
 use QueryBox\Exceptions\Unchecked\DriverImplementationNotFoundException;
+use QueryBox\QueryBuilder\Helper;
 use QueryBox\Resolver\DBResolver;
 use RuntimeException;
 use function ctype_upper;
@@ -21,18 +22,44 @@ class DBFacade
 	 * @var DBAdapter|null - database static object
 	 */
 	public static ?DBAdapter $instance = null;
+	/**
+	 * @var ?DBParams $connectionParams - cache for connection
+	 */	
+	protected static ?array $connectionParams = null;
+	/**
+	 * @var ?bool $immutable - flag (turn off singletone)
+	 */
+	protected static ?bool $immutable = null;
+	
+	
+	/**
+	 * @return DBParams
+	 */
+	static function getConnectionParams(): array
+	{
+		if (null !== self::$connectionParams) {
+			return self::$connectionParams;
+		} else {
+			/** @var DBParams */
+			$globalVars = $_ENV;
+			
+			return $globalVars;
+		}
+	}
 
 	/**
-	 * Register singleton instance (allias for getDBInstance)
-	 * If $params is not passed app used $_ENV params with the same array keys
-	 * Also QueryBuilder will try use this automaticly ($_ENV preffer)
-	 * $_ENV also will be used to get immutable DB instance
+	 * Register DB params and immutable option
+	 * If $params is not passed (null) DBFacade will be used $_ENV params and singletone connection
+	 * Also DBFacade use $_ENV param with the 'DB_IMMUTABLE' key for connection type manage
 	 *
-	 * @param DBParams|null $params
+	 * @param ?DBParams $params
+	 * @param ?bool $immutable
 	 * @return DBAdapter
 	 */
-	public static function registerGlobalDB(?array $params = null): DBAdapter
+	public static function registerGlobalDB(?array $params = null, ?bool $immutable = null): DBAdapter
 	{
+		self::setConnectionParams($params);
+		self::setImmutable($immutable);
 		return self::getDBInstance($params);
 	}
 
@@ -44,7 +71,7 @@ class DBFacade
 	 */
 	public static function getDBInstance(?array $params = null): DBAdapter
 	{
-			if (self::$instance === null) {
+			if (self::$instance === null || self::getImmutable()) {
 				self::$instance = self::getImmutableDBConnection($params);
 
 			}
@@ -53,16 +80,14 @@ class DBFacade
 	}
 
 	/**
-	 * Connection without singleton
+	 * Immutable connection
 	 * 
-	 * @param DBParams|null $params
+	 * @param ?DBParams $params
 	 * @return DBAdapter
 	 */
 	public static function getImmutableDBConnection(?array $params = null): DBAdapter
 	{
-		/** @var array{DB_NAME: string, DB_USER: string, DB_PASS: string, ...} $params */
-		$params ??= $_ENV;
-		return self::connectViaPDO($params);
+		return self::connectViaPDO($params ?? self::getConnectionParams());
 	}
 
 	/**
@@ -81,6 +106,29 @@ class DBFacade
 			$params['DB_USER'], 
 			$params['DB_PASS']
 		);
+	}
+
+	/**
+	 * @param ?bool $immutable - flag value
+	 */
+	static function setImmutable(?bool $immutable): void
+	{
+		self::$immutable = $immutable;
+	}
+	/**
+	 * @return bool
+	 */
+	static function getImmutable(): bool
+	{
+		return self::$immutable ?? $_ENV["DB_IMMUTABLE"] ?? false;
+	}
+
+	/**
+	 * @param ?DBParams $params
+	 */
+	static function setConnectionParams(?array $params): void
+	{
+		self::$connectionParams = $params;
 	}
 
 	/**
@@ -199,7 +247,7 @@ class DBFacade
 	{
 		if (is_array($field)) {
 			if (count($field) === 1) {
-				$field = DBFacade::mappedFieldsToString($field);
+				$field = BuilderHelper::mappedFieldsToString($field);
 			} else {
 				throw new RuntimeException('You can use WHERE state only with single field element');
 			}
