@@ -8,6 +8,7 @@ use QueryBox\DBFacade;
 use QueryBox\Migration\Container\Query;
 use QueryBox\Migration\Container\QueryGenerator;
 use QueryBox\Migration\MigrateAble;
+use QueryBox\QueryBuilder\Helper;
 
 abstract class BaseOptionFacade
 {
@@ -70,6 +71,6 @@ abstract class BaseOptionFacade
 	 */
 	protected static function genTableNameFromClassName(string $className): string
 	{
-		return DBFacade::genTableNameByClassName($className);
+		return Helper::genTableNameByClassName($className);
 	}
 }

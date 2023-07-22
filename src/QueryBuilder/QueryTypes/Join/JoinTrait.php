@@ -2,7 +2,8 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Join;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 trait JoinTrait
 {
@@ -11,7 +12,7 @@ trait JoinTrait
 	 */
 	public function innerJoin(array|string $table, array $condition): JoinQuery
 	{
-		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = DBFacade::joinArgsHandler($table, $condition);
+		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = Helper::joinArgsHandler($table, $condition);
 
 		return new ImplInnerJoin($this, $table, $leftSideField, $rightSideField);
 	}
@@ -21,7 +22,7 @@ trait JoinTrait
 	 */
 	public function leftJoin(array|string $table, array $condition): JoinQuery
 	{
-		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = DBFacade::joinArgsHandler($table, $condition);
+		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = Helper::joinArgsHandler($table, $condition);
 
 		return new ImplLeftJoin($this, $table, $leftSideField, $rightSideField);
 	}
@@ -31,7 +32,7 @@ trait JoinTrait
 	 */
 	public function rightJoin(array|string $table, array $condition): JoinQuery
 	{
-		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = DBFacade::joinArgsHandler($table, $condition);
+		['tableName' => $table, 'condition' => [$leftSideField, $rightSideField]] = Helper::joinArgsHandler($table, $condition);
 
 
 		return new ImplRightJoin($this, $table, $leftSideField, $rightSideField);

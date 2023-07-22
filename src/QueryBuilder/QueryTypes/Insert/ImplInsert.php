@@ -2,7 +2,8 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Insert;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 
 class ImplInsert extends InsertQuery
@@ -15,7 +16,7 @@ class ImplInsert extends InsertQuery
 	public function __construct(array $fields, array $values, string $tableName)
 	{
 		$fieldsStr = implode(', ', $fields);
-		$varsTemplate = DBFacade::genInsertVars(count($fields), intdiv(count($values), count($fields)));
+		$varsTemplate = Helper::genInsertVars(count($fields), intdiv(count($values), count($fields)));
 
 		parent::__construct(
 			$this::createQueryBox(

@@ -1,18 +1,18 @@
 <?php declare(strict_types=1);
 
-namespace QueryBox\Tests\Unit;
+namespace QueryBox\Tests\Unit\QueryBuilder;
 
-use QueryBox\DBFacade;
 use PHPUnit\Framework\TestCase;
+use QueryBox\QueryBuilder\Helper;
 
-class DBFacadeTest extends TestCase
+class HelperTest extends TestCase
 {
-	const CLASS_NAME = self::class;
-	const DB_NAME = 'd_b_facade_test';
+  const CLASS_NAME = self::class;
+	const DB_NAME = 'helper_test';
 
 	function testClassNameToDBNameConverter(): void
 	{
-		$this->assertEquals(self::DB_NAME, DBFacade::genTableNameByClassName(self::CLASS_NAME));
+		$this->assertEquals(self::DB_NAME, Helper::genTableNameByClassName(self::CLASS_NAME));
 	}
 
 	/** @var array<string|int, string|array<string>> */
@@ -28,7 +28,7 @@ class DBFacadeTest extends TestCase
 
 	function testFieldsWithPseudonymsToString(): void
 	{
-		$result = DBFacade::mappedFieldsToString($this->fieldsWithPseudonyms);
+		$result = Helper::mappedFieldsToString($this->fieldsWithPseudonyms);
 		$this->assertEquals(self::STRING_FIELDS_WITH_PARAMS_RESULT, $result);
 	}
 
@@ -43,7 +43,7 @@ class DBFacadeTest extends TestCase
 
 	function testTableNamesWithPseudonymsToString(): void
 	{
-		$result = DBFacade::mappedTableNamesToString($this->tableNamesWithPseudonyms);
+		$result = Helper::mappedTableNamesToString($this->tableNamesWithPseudonyms);
 		$this->assertEquals(self::STRING_TABLENAMES_WITH_PSEUDONYMS_RESULT, $result);
 	}
 
@@ -60,9 +60,9 @@ class DBFacadeTest extends TestCase
 
 	function JoinArgsHandler(): void
 	{
-		$result1 = DBFacade::joinArgsHandler(self::TABLE_NAME, self::JOIN_ARGS_PSEUDONYM);
-		$result2 = DBFacade::joinArgsHandler(self::TABLE_NAME, self::JOIN_ARGS_JUST_FIELDS);
-		$result3 = DBFacade::joinArgsHandler(self::TABLE_NAME,self::JOIN_ARGS_JUST_FIELDS_ASSOC);
+		$result1 = Helper::joinArgsHandler(self::TABLE_NAME, self::JOIN_ARGS_PSEUDONYM);
+		$result2 = Helper::joinArgsHandler(self::TABLE_NAME, self::JOIN_ARGS_JUST_FIELDS);
+		$result3 = Helper::joinArgsHandler(self::TABLE_NAME,self::JOIN_ARGS_JUST_FIELDS_ASSOC);
 
 		$this->assertEquals(self::JOIN_ARGS_RESULT, $result1);
 		$this->assertEquals(self::JOIN_ARGS_RESULT, $result2);
