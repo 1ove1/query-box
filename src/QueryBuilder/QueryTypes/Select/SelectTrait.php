@@ -2,7 +2,8 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Select;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 trait SelectTrait
 {
@@ -12,7 +13,7 @@ trait SelectTrait
 	public static function select(array|string $fields = '*',
 	                              array|string|null $anotherTables = null): SelectQuery
 	{
-		$fields = (is_string($fields)) ? $fields: DBFacade::mappedFieldsToString($fields);
+		$fields = (is_string($fields)) ? $fields: Helper::mappedFieldsToString($fields);
 
 		$anotherTables = (null === $anotherTables) ? self::tableQuoted(static::class): $anotherTables;
 

@@ -3,9 +3,10 @@
 namespace QueryBox\QueryBuilder\QueryTypes\Select;
 
 
-use QueryBox\DBFacade;
+
 use QueryBox\Exceptions\Unchecked\BadQueryBuilderCallbackReturnExcpetion;
 use QueryBox\QueryBuilder\ActiveRecord\ActiveRecord;
+use QueryBox\QueryBuilder\Helper;
 use RuntimeException;
 
 class ImplSelect extends SelectQuery
@@ -45,7 +46,7 @@ class ImplSelect extends SelectQuery
 				$clearMappedAnotherTables[$map] = $tableNameStr;
 			}
 
-			$anotherTables = DBFacade::mappedTableNamesToString($clearMappedAnotherTables);
+			$anotherTables = Helper::mappedTableNamesToString($clearMappedAnotherTables);
 		}
 
 

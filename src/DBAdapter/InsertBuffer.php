@@ -6,6 +6,7 @@ use QueryBox\DBFacade;
 use QueryBox\Exceptions\Unchecked\IncorrectBufferInputException;
 use QueryBox\Exceptions\Checked\InvalidForceInsertConfigurationException;
 use QueryBox\DBAdapter\DatabaseContract;
+use QueryBox\QueryBuilder\Helper;
 
 /**
  * Lazy insert abstract class
@@ -73,7 +74,7 @@ abstract class InsertBuffer
 
 	public function genVarsFromCurrentBufferCursor(): string
 	{
-		return DBFacade::genInsertVars(
+		return Helper::genInsertVars(
 			$this->getTableFieldsCount(), $this->getCurrentBufferCursor()
 		);
 	}

@@ -2,7 +2,8 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Where;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 trait WhereTrait
 {
@@ -18,7 +19,7 @@ trait WhereTrait
 			return new ImplNestedWhere($this, $field_or_nested_clbk);
 		}
 
-		['field' => $field, 'sign' => $sign, 'value' => $value] = DBFacade::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
+		['field' => $field, 'sign' => $sign, 'value' => $value] = Helper::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
 
 		return new ImplWhere($this, $field, $sign, $value);
 
