@@ -138,7 +138,7 @@ use SelectTrait, InsertTrait, UpdateTrait, DeleteTrait;
 	 */
 	static function table(?string $className = null): string
 	{
-		return DBFacade::genTableNameByClassName($className ?? static::class);
+		return Helper::genTableNameByClassName($className ?? static::class);
 	}
 
 	/**

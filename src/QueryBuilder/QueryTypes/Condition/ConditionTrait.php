@@ -2,12 +2,13 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Condition;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 trait ConditionTrait
 {
 	/**
-	 * @inheritDoc
+	 * @inheritDoc	
 	 */
 	public static function where(callable|array|string $field_or_nested_clbk,
 	                             mixed $sign_or_value = '',
@@ -18,7 +19,7 @@ trait ConditionTrait
 			return new ImplNestedCondition($field_or_nested_clbk);
 		}
 
-		['field' => $field, 'sign' => $sign, 'value' => $value] = DBFacade::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
+		['field' => $field, 'sign' => $sign, 'value' => $value] = Helper::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
 
 		return new ImplCondition($field, $sign, $value);
 	}

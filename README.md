@@ -28,6 +28,7 @@ $_ENV["DB_PORT"] = "3306"; // 3306 by default
 // extra params
 $_ENV["LOG_QUERY_RESULTS"] = "true" // false by default
 $_ENV["LOG_PATH"] = "/my/log/path" // by default use stdOut
+$_ENV["DB_IMMUTABLE"] = "false" // manage type of connection with db (persistence or immutable)
 ```
 
 ```.env
@@ -46,6 +47,7 @@ DB_PORT="3306"; # 3306 by default
 # extra params
 LOG_QUERY_RESULTS="true" # false by default
 LOG_PATH="/my/log/path" # by default use stdOut
+DB_IMMUTABLE="false" # manage type of connection with db (persistence or immutable)
 ```
 
 3. Create your first model (or use QueryBuilder::table('my_table')):

@@ -2,7 +2,8 @@
 
 namespace QueryBox\QueryBuilder\QueryTypes\Condition;
 
-use QueryBox\DBFacade;
+
+use QueryBox\QueryBuilder\Helper;
 
 trait ContinueConditionTrait
 {
@@ -17,7 +18,7 @@ trait ContinueConditionTrait
 			return new ImplNestedConditionAnd($this, $field_or_nested_clbk);
 		}
 
-		['field' => $field, 'sign' => $sign, 'value' => $value] = DBFacade::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
+		['field' => $field, 'sign' => $sign, 'value' => $value] = Helper::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
 
 
 		return new ImplConditionAnd($this, $field, $sign, $value);
@@ -34,7 +35,7 @@ trait ContinueConditionTrait
 			return new ImplNestedConditionOr($this, $field_or_nested_clbk);
 		}
 
-		['field' => $field, 'sign' => $sign, 'value' => $value] = DBFacade::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
+		['field' => $field, 'sign' => $sign, 'value' => $value] = Helper::whereArgsHandler($field_or_nested_clbk, $sign_or_value, $value);
 
 		return new ImplConditionOr($this, $field, $sign, $value);
 	}

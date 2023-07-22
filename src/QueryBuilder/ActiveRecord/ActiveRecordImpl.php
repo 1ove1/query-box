@@ -2,9 +2,12 @@
 
 namespace QueryBox\QueryBuilder\ActiveRecord;
 
+use Monolog\Logger;
+use QueryBox\DBAdapter\DBAdapter;
 use QueryBox\DBAdapter\QueryResult;
 use QueryBox\DBAdapter\QueryTemplate;
 use QueryBox\DBFacade;
+use QueryBox\Exceptions\Unchecked\BadQueryResultException;
 use QueryBox\Resolver\DBResolver;
 
 abstract class ActiveRecordImpl implements ActiveRecord
@@ -18,26 +21,21 @@ abstract class ActiveRecordImpl implements ActiveRecord
 	}
 
 	/**
-	 * Generate QueryTemplate by QueryBox
-	 *
-	 * @param QueryBox $queryBox
-	 * @return QueryTemplate
-	 */
-	private static function getState(QueryBox $queryBox) : QueryTemplate
-	{
-		$db = DBFacade::getDBInstance();
-		$template = $queryBox->getQuerySnapshot();
-
-		return $db->prepare($template);
-	}
-
-	/**
 	 * {@inheritDoc}
 	 */
 	public function execute(array $values): QueryResult
 	{
-		$state = self::getState($this->queryBox);
-		return $state->exec($values);
+		try {
+			$db = DBFacade::getDBInstance();
+			$querySnapshot = $this->queryBox->getQuerySnapshot();
+
+			return $db->prepare($querySnapshot)->exec($values);
+		} catch(BadQueryResultException $e) {
+			$db = DBFacade::getImmutableDBConnection();
+			$querySnapshot = $this->queryBox->getQuerySnapshot();
+
+			return $db->prepare($querySnapshot)->exec($values);
+		}
 	}
 
 	/**
@@ -45,8 +43,7 @@ abstract class ActiveRecordImpl implements ActiveRecord
 	 */
 	public function save(): QueryResult
 	{
-		$state = self::getState($this->queryBox);
-		return $state->exec($this->queryBox->getDryArgs());
+		return $this->execute($this->queryBox->getDryArgs());
 	}
 
 	/**
