@@ -8,10 +8,12 @@ use QueryBox\QueryBuilder\QueryTypes\ContinueWhere\ContinueWhereAble;
 use QueryBox\QueryBuilder\QueryTypes\ContinueWhere\ContinueWhereTrait;
 use QueryBox\QueryBuilder\QueryTypes\Limit\LimitAble;
 use QueryBox\QueryBuilder\QueryTypes\Limit\LimitTrait;
+use QueryBox\QueryBuilder\QueryTypes\OrderBy\OrderByAble;
+use QueryBox\QueryBuilder\QueryTypes\OrderBy\OrderByTrait;
 
 abstract class WhereQuery
 	extends ActiveRecordImpl
-	implements ActiveRecord, ContinueWhereAble, LimitAble
+	implements ActiveRecord, ContinueWhereAble, OrderByAble, LimitAble
 {
-use ContinueWhereTrait, LimitTrait;
+use ContinueWhereTrait, OrderByTrait, LimitTrait;
 }
