@@ -65,7 +65,7 @@ class DBFacade
 	 */
 	public static function getDBInstance(?array $params = null): DBAdapter
 	{
-			if (self::$instance === null || self::getImmutable()) {
+			if (self::$instance === null || !self::getImmutable()) {
 				self::$instance = self::getImmutableDBConnection($params);
 
 			}
@@ -125,4 +125,14 @@ class DBFacade
 		self::$connectionParams = $params;
 	}
 
+	/**
+	 * Recreate db instance
+	 *
+	 * @param array|null $params
+	 * @return void
+	 */
+	static function recreateInstance(?array $params): void
+	{
+		self::$instance = self::getImmutableDBConnection($params);
+	}
 }
